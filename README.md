@@ -1,6 +1,10 @@
 # CMPS-3240-Lab12
 
-
+I started with the BLOCKSIZE as 32. Like the textbook stated, this meant each matrix would be 32 x 32 = 1024 elements. So the matrices would occupy 24 KiB
+which would easily fit into the 32 KiB data cache of an Intel Core i7. Out of curiousity, I used 64 as the BLOCKSIZE but after 4 minutes I gave up and
+realized that was too big of a BLOCKSIZE. After running a few tests, it seems a BLOCKSIZE between 32 and 40 would be the best to use for the program to run
+as efficiently as possible. A smaller BLOCKSIZE runs faster but does less work, while a larger BLOCKSIZE would take many clock cycles to complete due to the 
+amount of work/matrices. 
 
 Benchmark for BLOCKSIZE = 32
 ```shell
